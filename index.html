@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>JSimalango | Recipe page</title>
+		<style>
+			body {
+			    margin: 0;
+			    padding: 0;
+			    box-sizing: border-box;
+			    height: 100vh;
+			    background-color: hsl(30, 54%, 90%);
+			    font-size: 16px;
+			    font-family: 'Outfit', sans-serif;
+                font-weight: 400;
+			}
+			.container {
+			    margin: 0 auto;
+			    max-width: 800px;
+			    display: flex;
+			    flex-direction: column;
+			    justify-content: center;
+			    align-items: center;
+			    background-color: hsl(330, 100%, 98%);
+			    border-radius: 10px;
+                color: hsl(30, 10%, 34%);
+			}
+			img {
+			    border-radius: 10px;
+                margin-top: 15px;
+			}
+			h2 {
+			    font-family: 'Young Serif', sans-serif;
+                font-size: 32px;
+                color: hsl(24, 5%, 18%);
+			}
+			.preparation {
+			    background-color: hsl(333, 39%, 91%);
+			    padding: 10px;
+                border-radius: 10px;
+			}
+			.preparation h3 {
+			    color: hsl(332, 51%, 32%);
+                margin-left: 16px;
+			}
+            .preparation ul {
+                padding-left: 20px;
+            }
+            .preparation ul li {
+                color: hsl(30, 10%, 34%);
+                font-size: 15px;
+                line-height: 1.75;
+                padding-left: 20px;
+            }
+            .ingredients ul  {
+                padding-left: 20px;
+                font-weight: 500;
+            }
+            .ingredients ul li {
+                padding-left: 20px;
+                line-height: 1.8;
+            }
+            .instructions ol {
+                list-style: none;
+                counter-reset: jago;
+                padding-left: 5px;
+            }
+            .instructions ol li {
+                margin: 0 0 1rem 2rem;
+                counter-increment: jago;
+                position: relative;
+            }
+            .instructions ol li::before {
+                content: counter(jago) ". ";
+                color: hsl(14, 45%, 36%);
+                font-weight: bold;
+                position: absolute;
+                --size: 20px;
+                left: calc(-1 *var(--size) - 12px);
+                line-height: var(--size);
+
+            }
+            .title-2 {
+                font-size: 22px;
+                font-family: 'Young Serif', sans-serif;
+                color: hsl(14, 45%, 36%);
+            }
+			.text-bold {
+			    font-weight: 700;
+			}
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .line {
+                border: 1px solid hsl(30, 18%, 87%);
+            }
+            tr {
+                border-bottom: 1px solid hsl(30, 18%, 87%);
+                line-height: 3em;
+            }
+            tr > td:first-child {
+                padding-left: 30px;
+                width: 0%;
+                text-align: left;
+            }
+            tr > td:last-child {
+                width: 90%;
+                font-weight: bold;
+                text-align: center;
+            }
+			.attribution { font-size: 12px; text-align: center; margin-top: 20px; margin-bottom: 10px;}
+			.attribution a { color: hsl(228, 45%, 44%); }
+
+            @media screen and (max-width: 375px) {
+                .container {
+                    margin: 0;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+		</style>
+	</head>
+	<body>
+		<main class="container">
+			<figure class="one">
+				<div class="picture">
+					<img
+						src="/assets/images/image-omelette.jpeg"
+						alt="omelette"
+						width="100%"
+						height="400"
+					/>
+				</div>
+				<div class="description-1">
+					<h2>Simple Omelette Recipe</h2>
+					<p>
+						An easy and quick dish, perfect for any meal. This
+						classic omelette combines beaten eggs cooked to
+						perfection, optionally filled with your choice of
+						cheese, vegetables, or meats.
+					</p>
+				</div>
+				<div class="preparation">
+					<h3>Preparation time</p>
+					<ul>
+						<li>
+							<b>Total:</b>
+							Approximately 10 minutes
+						</li>
+						<li>
+							<b>Preparation:</b> 5
+							minutes
+						</li>
+						<li>
+							<b>Cooking:</b> 5 minutes
+						</li>
+					</ul>
+				</div>
+				<div class="ingredients">
+					<h3 class='title-2'>Ingredients</h3>
+                    <ul>
+                        <li>2-3 large eggs</li>
+                        <li>Salt to taste</li>
+                        <li>Pepper, to taste</li>
+                        <li>1 tablespoon of butter or oil</li>
+                        <li>
+                            Optional fillings: cheese, diced vegetables, cooked
+                            meats, herbs
+                        </li>
+                    </ul>
+				</div>
+				<hr class='line'/>
+				<div class="instructions">
+					<h3 class='title-2'>Instructions</h3>
+					<ol>
+						<li>
+							<b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch
+							of salt and pepper until they are well mixed. You
+							can add a tablespoon of water or milk for a fluffier
+							texture.
+						</li>
+						<li>
+							<b>Heat the pan:</b> Place a non-stick frying pan over
+							medium heat and add butter or oil.
+						</li>
+						<li>
+							<b>Cook the omelette:</b> Once the butter is melted and
+							bubbling, pour in the eggs. Tilt the pan to ensure
+							the eggs evenly coat the surface.
+						</li>
+						<li>
+							<b>Add fillings (optional):</b> When the eggs begin to set
+							at the edges but are still slightly runny in the
+							middle, sprinkle your chosen fillings over one half
+							of the omelette.
+						</li>
+						<li>
+							<b>Fold and serve:</b> As the omelette continues to cook,
+							carefully lift one edge and fold it over the
+							fillings. Let it cook for another minute, then slide
+							it onto a plate.
+						</li>
+						<li>
+							<b>Enjoy:</b> Serve hot, with additional salt and pepper if
+							needed.
+						</li>
+					</ol>
+				</div>
+				<hr class='line' />
+				<div class="nutrition">
+					<h3 class='title-2'>Nutrition</h3>
+					<p>
+						The table below shows nutritional values per serving
+						without the additional fillings.
+					</p>
+					<table>
+						<tbody>
+                            <tr>
+                                <td>Calories</td>
+                                <td>277kcal</td>
+						    </tr>
+						    <tr>
+                                <td>Carbs</td>
+                                <td>0g</td>
+						    </tr>
+						    <tr>
+                                <td>Protein</td>
+                                <td><b>20g</b></td>
+						    </tr>
+						    <tr>
+                                <td>Fat</td>
+                                <td><b>22g</b></td>
+						    </tr>
+                        </tbody>
+					</table>
+				</div>
+			</figure>
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">JSimalango</a>.
+		</div>
+		</main>
+
+	</body>
+</html>
